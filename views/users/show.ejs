@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<div id="profile-box" class="row">
+	<div id="line-btw" class="col-md-4">
+			<h1><%= user.firstName + " " + user.lastName %></h1>
+		<div id="frame-in" class="thumbnail">
+			<img id="img-frame" src="<%= user.avatar %>" alt="user profile image">
+			<div class="caption"><a href="mailto:<%= user.email %>"><%= user.email %></a></div>
+		</div>
+           <a class="btn btn-warning" href="<%= user.id %>/edit">Edit</a>
+    </div>
+	<div id="right-col" class="col-md-8">
+		<h3><%= user.username %>'s places:</h3>
+		<ul>
+		<% places.forEach(function(place) { %>
+			<li id="item-list"><a href="/places/<%= place.id %>"><%= place.name %></a></li>
+		<% }); %>
+		</ul>
+		<h3><%= user.username %>'s comments:</h3>
+    </div>
+</div>
+
+<% include ../partials/footer %>

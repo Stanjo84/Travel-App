@@ -1,0 +1,109 @@
+body {
+  background-color: #232323;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+}
+
+#landing-header__title {
+  padding-bottom: 10px;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 25s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724425/joshua-earle-234740-unsplash.jpg); 
+}
+
+
+.slideshow li:nth-child(2) { 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724427/christian-regg-534459-unsplash.jpg);
+  animation-delay: 5s; 
+}
+
+.slideshow li:nth-child(3) { 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724428/federico-respini-228910-unsplash.jpg);
+  animation-delay: 10s; 
+}
+
+.slideshow li:nth-child(4) { 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724430/pascal-debrunner-677351-unsplash.jpg);
+  animation-delay: 15s; 
+}
+
+.slideshow li:nth-child(5) { 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724432/leila-azevedo-358304-unsplash.jpg);
+  animation-delay: 20s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+
+.enter-btn {
+    color: #fff;
+    background-color: #d52b1e;
+    border-color: #d52b1e;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.enter-btn:hover {
+    color: #fff;
+    background-color: #e96c63;
+    border-color: #e96c63;
+}
+

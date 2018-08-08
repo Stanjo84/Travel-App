@@ -1,0 +1,42 @@
+<% include ../partials/header %>
+
+        <header class="jumbotron container-shadow jumbo-color">
+            <div class="container">
+                <h1>Welcome to Swiss Travels</h1>
+                <p>Discover Best Places to Visit in Switzerland</p>
+                <p>
+                    <a class="btn btn-primary btn-lg btn-add" href="/places/new">Add Your Favorite Place</a>
+                </p>
+                <p>
+                    <form action="/places" method="GET" class="form-inline pull-right">
+                        <div class="form-group">
+                            <input type="text" name="search" placeholder="Search" class="form-control">
+                <button type="submit" value="search" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </form>
+                </p>
+             </div>
+        </header>
+        
+       <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+           <div class="col-md-12">
+               <% if(noMatch !== null) { %>
+               <h3><%= noMatch %></h3>
+               <% } %>
+           </div>
+            <% places.forEach(function(place){ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail places-shadow">
+                        <img src="<%= place.image %>">
+                        <div class="caption"> 
+                            <h4><%= place.name %></h4>
+                        </div>
+                        <p>
+                            <a href="/places/<%= place._id %>" class="btn btn-primary btn-show">More Info</a>
+                        </p>
+                    </div>
+                </div> 
+            <% }); %>
+        </div>
+
+<% include ../partials/footer %>
