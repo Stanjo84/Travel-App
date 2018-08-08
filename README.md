@@ -1,5 +1,5 @@
 # Travel-App
-My Travel App create with Node.js and NPM packages
+My Travel App created with Node.js and NPM packages
 
 
 Heroku - https://gentle-meadow-83294.herokuapp.com/
