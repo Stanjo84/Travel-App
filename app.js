@@ -21,11 +21,8 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
     
     
-console.log(process.env.DATABASEURL);    
-    
-    
-//mongoose.connect("mongodb://localhost/chtravel_v1");
-mongoose.connect("mongodb://travel-admin:stans84@ds115442.mlab.com:15442/travel-app");
+var url = process.env.DATABASEURL || "mongodb://localhost/chtravel_v1"
+mongoose.connect(url);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
