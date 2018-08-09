@@ -1,19 +1,54 @@
 <% include ../partials/header %>
 
+
+
     <div class="row container-shadow">
         <h1 style="text-align: center;">Create a New Entry</h1>
-            <div style="width: 30%; margin: 30px auto;">
+            <div class="entry-form">
                 <form action="/places" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" type="text" name="place[name]" placeholder="name">
+                        <label for="name">Name*</label>
+                        <input class="form-control" type="text" name="place[name]" placeholder="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="location">Location</label>
-                        <input class="form-control" type="text" name="place[location]" id="location" placeholder="Zürich, Switzerland">
+                        <label for="location">Location*</label>
+                        <input class="form-control" type="text" name="place[location]" id="location" placeholder="Zürich, Switzerland" required>
                     </div>
+                    <div class="custom-select" style="width: 100%;">
+                        <label for="image">Canton*</label>
+                        <select name="place[canton]" required>
+                            <option value="">Select a Canton:</option>
+                            <option value="Aargau">Aargau</option>
+                            <option value="Appenzell Ausserrhoden">Appenzell Ausserrhoden</option>
+                            <option value="Appenzell Innerhoden">Appenzell Innerhoden</option>
+                            <option value="Basel-Landschaft">Basel-Landschaft</option>
+                            <option value="Basel-Stadt">Basel-Stadt</option>
+                            <option value="Bern">Bern</option>
+                            <option value="Fribourg">Fribourg</option>
+                            <option value="Geneva">Geneva</option>
+                            <option value="Glarus">Glarus</option>
+                            <option value="Grisons">Grisons</option>
+                            <option value="Jura">Jura</option>
+                            <option value="Luzern">Luzern</option>
+                            <option value="Neuchàtel">Neuchàtel</option>
+                            <option value="Nidwalden">Nidwalden</option>
+                            <option value="Obwalden">Obwalden</option>
+                            <option value="Schaffhausen">Schaffhausen</option>
+                            <option value="Schwyz">Schwyz</option>
+                            <option value="Solothurn">Solothurn</option>
+                            <option value="St. Gallen">St. Gallen</option>
+                            <option value="Thurgau">Thurgau</option>
+                            <option value="Ticino">Ticino</option>
+                            <option value="Uri">Uri</option>
+                            <option value="Valais">Valais</option>
+                            <option value="Vaud">Vaud</option>
+                            <option value="Zug">Zug</option>
+                            <option value="Zürich">Zürich</option>                            
+                        </select>
+                    </div> 
+                    <br>
                     <div class="form-group">
-                        <label for="image">Image</label>
+                        <label for="image">Image*</label>
                         <input class="btn btn-primary form-control image-upload" type="file" id="image" name="image" accept="image/*" required>
                     </div>
                      <div class="form-group">
@@ -27,5 +62,6 @@
                 <a href="/places">Go Back</a>
             </div>
     </div>
+
 
 <% include ../partials/footer %>

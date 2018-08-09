@@ -44,27 +44,27 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724425/joshua-earle-234740-unsplash.jpg); 
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533809713/joshua-earle-234740-unsplash_1.jpg); 
 }
 
 
 .slideshow li:nth-child(2) { 
-  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724427/christian-regg-534459-unsplash.jpg);
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533809713/christian-regg-534459-unsplash.jpg);
   animation-delay: 5s; 
 }
 
 .slideshow li:nth-child(3) { 
-  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724428/federico-respini-228910-unsplash.jpg);
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533809713/federico-respini-228910-unsplash.jpg);
   animation-delay: 10s; 
 }
 
 .slideshow li:nth-child(4) { 
-  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724430/pascal-debrunner-677351-unsplash.jpg);
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533809713/pascal-debrunner-677351-unsplash.jpg);
   animation-delay: 15s; 
 }
 
 .slideshow li:nth-child(5) { 
-  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533724432/leila-azevedo-358304-unsplash.jpg);
+  background-image: url(https://res.cloudinary.com/st4n5tr4w4/image/upload/v1533809713/leila-azevedo-358304-unsplash.jpg);
   animation-delay: 20s; 
 }
 

@@ -8,7 +8,7 @@ var express         = require("express"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local"),
     methodOverride  = require("method-override"),
-    Place     = require("./models/place"),
+    Place           = require("./models/place"),
     Comment         = require("./models/comment"),
     User            = require("./models/user"),
     seedDB          = require("./seeds")
@@ -16,13 +16,17 @@ var express         = require("express"),
 
 // requiring routes from separate location    
 var commentRoutes       = require("./routes/comments"),
-    placeRoutes    = require("./routes/places"),
+    placeRoutes         = require("./routes/places"),
     userRoutes          = require("./routes/users"),
     indexRoutes         = require("./routes/index");
     
     
+console.log(process.env.DATABASEURL);    
+    
+    
 //mongoose.connect("mongodb://localhost/chtravel_v1");
 mongoose.connect("mongodb://travel-admin:stans84@ds115442.mlab.com:15442/travel-app");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");

@@ -212,6 +212,8 @@ body {
 }
 
 
+
+
 /* sidebar title */
 .side-title {
     padding: 10px 0 10px 5px;
@@ -265,4 +267,161 @@ body {
 .places-shadow {
     box-shadow: -4px 8px 6px 2px #888888;
 }
+
+.entry-form {
+    width: 30%;
+    margin: 30px auto;
+}
+
+/* Canton Select */
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: #286090;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 38px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+  
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 33px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  height: 34px;
+  /*border: 1px solid transparent;*/
+  border-radius: 4px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #286090;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: #4b91ce;
+}
+
+/* Start Responsive */
+
+
+@media only screen and (max-width: 600px) {
+    .input-group {
+        bottom: 5px;
+        
+    }
+    
+    .entry-form {
+        
+        width: 60%;
+        margin: 30px auto;
+    }
+    
+
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .input-group {
+       bottom: 55px;
+        
+    }
+    
+    .entry-form {
+        
+        width: 50%;
+        margin: 30px auto;
+    }
+    
+
+}
+
+
+@media only screen and (min-width: 768px) {
+    .input-group {
+        bottom: 55px;
+        
+    }
+    
+    .entry-form {
+        
+        width: 40%;
+        margin: 30px auto;
+    }
+    
+
+}    
+
+@media only screen and (min-width: 992px) {
+    .input-group {
+        bottom: 55px;
+        
+    }
+    
+    .entry-form {
+        
+        width: 30%;
+        margin: 30px auto;
+    }
+    
+    /*.select-items div,.select-selected {*/
+        
+    /*    width: 125%;*/
+    /*}*/
+}  
+    
+
+
+/*@media only screen and (min-width: 1200px) {*/
+/*    .input-group {*/
+/*        bottom: 55px;*/
+        
+/*    }*/
+    
+/*    .entry-form {*/
+        
+/*        width: 30%;*/
+/*        margin: 30px auto;*/
+/*    }*/
+    
+/*    .select-items div,.select-selected {*/
+        
+/*        width: 160%;*/
+/*    }*/
+/*}    */
+    
+
+
+
 

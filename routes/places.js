@@ -67,6 +67,7 @@ router.get("/", function(req, res){
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res){
       // get data from form and add to places array
       var name = req.body.place.name;
+      var canton = req.body.place.canton;
       var price = req.body.place.price;
       var image = req.body.place.image;
       var imageId = req.body.place.imageId;
@@ -91,7 +92,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
           var lat = data[0].latitude;
           var lng = data[0].longitude;
           var location = data[0].formattedAddress;
-          var newPlace = {name: name, price: price, image: image, imageId: imageId, description: desc, author:author, location: location, lat: lat, lng: lng};
+          var newPlace = {name: name, canton: canton, price: price, image: image, imageId: imageId, description: desc, author:author, location: location, lat: lat, lng: lng};
           
           // Create a new place and save to DB
           Place.create(newPlace, function(err, newlyCreated){
@@ -163,6 +164,7 @@ router.put("/:id", middleware.checkPlaceOwnership, upload.single("image"), funct
               }
             }
             place.name = req.body.place.name;
+            place.canton = req.body.place.canton
             place.description = req.body.place.description;
             place.location = location;
             place.lat = data[0].latitude;

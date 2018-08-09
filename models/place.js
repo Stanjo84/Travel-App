@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 // Schema setup
 var placeSchema = new mongoose.Schema({
     name: String,
+    canton: String,
     price: String,
     image: String,
     imageId: String,
